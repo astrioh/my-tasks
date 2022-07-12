@@ -44,7 +44,9 @@ class ConfigService {
 
       migrations: ['src/migration/*.ts'],
 
-      ssl: this.isProduction(),
+      ssl: {
+        rejectUnauthorized: false,
+      },
     };
   }
 }
